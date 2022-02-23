@@ -7,6 +7,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (BOOL)application:(UIApplication *)application
     continueUserActivity:(NSUserActivity *)userActivity
       restorationHandler:(void (^)(NSArray *_Nullable))restorationHandler;
+- (void)setLatestLink:(NSString *)latestLink;
+
 @end
 
 NS_ASSUME_NONNULL_END
