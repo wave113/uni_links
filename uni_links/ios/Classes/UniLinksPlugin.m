@@ -54,13 +54,13 @@ static id _instance;
   self.latestLink = self.initialLink;
   return YES;
 }
-
-- (BOOL)application:(UIApplication *)application
-            openURL:(NSURL *)url
-            options:(NSDictionary<UIApplicationOpenURLOptionsKey, id> *)options {
-  self.latestLink = [url absoluteString];
-  return YES;
-}
+// Flutter引擎里，如果有一个ApplicationDelegate对下面这个方法返回yes, 则不再执行其他ApplicationDelegate的方法，所以这里选择注释掉这个方法，并手动set latestLink
+// - (BOOL)application:(UIApplication *)application
+//             openURL:(NSURL *)url
+//             options:(NSDictionary<UIApplicationOpenURLOptionsKey, id> *)options {
+//   self.latestLink = [url absoluteString];
+//   return YES;
+// }
 
 - (BOOL)application:(UIApplication *)application
     continueUserActivity:(NSUserActivity *)userActivity
